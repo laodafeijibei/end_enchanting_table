@@ -19,7 +19,18 @@ build/
 run-data/
 mcmodsrepo/
 dist/
-ports/
+
+# port workspace caches and generated output
+ports/**/build/
+ports/**/.gradle/
+ports/**/run/
+ports/**/run2/
+ports/**/run-data/
+ports/**/logs/
+ports/**/local-maven/
+ports/**/vendor-src/
+ports/**/repo/
+ports/**/src/generated/
 
 # other
 eclipse/

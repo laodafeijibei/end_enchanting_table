@@ -1,0 +1,28 @@
+pluginManagement {
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'net.neoforged.gradle.userdev') {
+                useModule("net.neoforged.gradle:userdev:${requested.version}")
+            }
+        }
+    }
+    repositories {
+        gradlePluginPortal()
+        maven { url = 'https://bmclapi2.bangbang93.com/maven/' }
+        maven { url = 'https://maven.aliyun.com/repository/public' }
+        maven { url = 'https://mirrors.tencent.com/repository/maven-public/' }
+        maven {
+            url = 'https://maven.neoforged.net/releases'
+            content {
+                includeGroupByRegex 'net\\.neoforged\\.gradle.*'
+                includeGroup 'net.neoforged'
+            }
+        }
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+rootProject.name = 'end_enchanting_table_neoforge_1_21_1'

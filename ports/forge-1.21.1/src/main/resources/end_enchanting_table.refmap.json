@@ -1,0 +1,22 @@
+{
+  "mappings": {
+    "com/laodafeijibei/zhongyanfumotai/mixin/EnchantmentMixin": {
+      "getFullname": "Lnet/minecraft/world/item/enchantment/Enchantment;m_44700_(Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;"
+    },
+    "com/laodafeijibei/zhongyanfumotai/mixin/ItemEnchantmentsMutableMixin": {
+      "set": "Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;m_319152_(Lnet/minecraft/core/Holder;I)V",
+      "upgrade": "Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;m_323014_(Lnet/minecraft/core/Holder;I)V"
+    }
+  },
+  "data": {
+    "searge": {
+      "com/laodafeijibei/zhongyanfumotai/mixin/EnchantmentMixin": {
+        "getFullname": "Lnet/minecraft/world/item/enchantment/Enchantment;m_44700_(Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;"
+      },
+      "com/laodafeijibei/zhongyanfumotai/mixin/ItemEnchantmentsMutableMixin": {
+        "set": "Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;m_319152_(Lnet/minecraft/core/Holder;I)V",
+        "upgrade": "Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;m_323014_(Lnet/minecraft/core/Holder;I)V"
+      }
+    }
+  }
+}
