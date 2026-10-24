@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "NNN",
+    "NEN",
+    "OOO"
+  ],
+  "key": {
+    "N": {"item": "minecraft:netherite_block"},
+    "E": {"item": "minecraft:enchanting_table"},
+    "O": {"item": "minecraft:obsidian"}
+  },
+  "result": {
+    "item": "end_enchanting_table:end_enchanting_table"
+  },
+  "show_notification": true
+}
