@@ -2,22 +2,6 @@
 
 Minecraft 1.20.1 Forge Mod，作者：laodafeijibei。
 
-## 安装
-
-1. 安装 Minecraft 1.20.1 与 Forge 47.3.20。
-2. 客户端和服务端都将 `End Enchanting Table.jar` 放入 `mods` 目录。
-3. 使用 Java 17 启动游戏。
-
-## PCL 双语名称与封面
-
-交付 JAR 使用纯英文文件名 `End Enchanting Table.jar`；Forge `mods.toml` 的 `displayName` 与 PCL 本地项目名均配置为 `终焉附魔台 | End Enchanting Table`，并内嵌封面。PCL 2.13 对没有发布到 Modrinth/CurseForge 的私人 JAR 默认不读取 Forge 封面，可在本机运行以下脚本安装 PCL 本地显示数据：
-
-```powershell
-.\tools\install_pcl_display.ps1
-```
-
-脚本会安装双语 JAR、从 JAR 提取封面、写入 PCL 本地项目缓存，并在首次修改前备份原缓存。本项目所用 PCL 实例已经执行并验证完成。
-
 ## 合成
 
 ```text
@@ -49,12 +33,3 @@ Minecraft 1.20.1 Forge Mod，作者：laodafeijibei。
 本 Mod 将标准 `Enchantments` / `StoredEnchantments` NBT 的 `lvl` 改为 32 位整数，并修正 Forge 1.20.1 的 255 级读取钳制。原版和 Forge 通过 `EnchantmentHelper` 查询时会获得完整等级；超高等级 Tooltip 使用十进制显示。`Integer.MAX_VALUE` 的耐久附魔另有溢出保护。
 
 其他 Mod 的附魔会被列出并写入完整等级。如果某个第三方附魔在自己的实现中主动钳制等级或使用会溢出的自定义数学，本 Mod无法通用改写该第三方代码。
-
-## 构建与验证
-
-```powershell
-.\gradlew.bat test --no-daemon
-.\gradlew.bat build --no-daemon
-```
-
-构建输出位于 `build\libs\end_enchanting_table-1.1.2.jar`。目标双语显示来自 Forge/PCL 元数据，不依赖文件名解析；Forge 内部兼容 ID 仍为合法的 `end_enchanting_table`。资源可通过 `tools\generate_assets.ps1` 重新生成；首次运行前需先执行一次 `gradlew compileJava` 以准备 Minecraft 1.20.1 的 UV 参考缓存。
